@@ -61,12 +61,13 @@ const FancyAnchor = withStyle(RedAnchor, {fontFamily: "cursive"});
 <FancyAnchor href="/foo">Hello</FancyAnchor>;
 
 const DeluxePanel = withStyle(Panel, props => ({
-  backgroundColor: props.alert ? "firebrick" : "rebeccapurple",
+  backgroundColor: props.$alert ? "firebrick" : "rebeccapurple",
   color: "white",
   boxShadow: "3px 3px 3px darkgray"
 }));
 
-<DeluxePanel>Bonjour Monde</DeluxePanel>;
+<DeluxePanel>Bonjour Monde in "rebeccapurple" bg</DeluxePanel>;
+<DeluxePanel $alert>Bonjour Monde in "firebrick" bg</DeluxePanel>;
 ```
 
 See [packages/styletron-react](packages/styletron-react/README.md) for full documentation
